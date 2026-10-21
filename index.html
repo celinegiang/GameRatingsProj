@@ -1,0 +1,127 @@
+//Home Page HTML 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review and Play - Gaming Diary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- Hero Section -->
+        <header class="hero-header">
+            <h1 class="main-title">Review and Play</h1>
+            <p class="hero-description">
+                Level up your voice: jump into our gaming review browser today, share your ultimate hot takes, and help shape the future of play for gamers worldwide!<br>
+                <span>Join us on our platform: <a href="https://www.gamingdiary.com" target="_blank" class="link-highlight">www.gamingdiary.com</a></span>
+            </p>
+        </header>
+
+        <!-- Top Gallery Row -->
+        <section class="gallery-grid">
+            <div class="card gallery-card">
+                <svg class="abstract-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="35" fill="url(#grad1)" opacity="0.8"/>
+                    <rect x="30" y="70" width="160" height="40" rx="20" transform="rotate(-35 30 70)" fill="url(#grad2)"/>
+                    <rect x="150" y="120" width="100" height="30" rx="15" transform="rotate(-35 150 120)" fill="url(#grad1)"/>
+                    <defs>
+                        <linearGradient id="grad1" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#a855f7"/>
+                            <stop offset="1" stop-color="#ec4899"/>
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#e879f9"/>
+                            <stop offset="1" stop-color="#818cf8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="card gallery-card center-media">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Gamer with headset" class="hero-img">
+            </div>
+
+            <div class="card gallery-card">
+                <svg class="abstract-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="65" stroke="url(#torusGrad)" stroke-width="22" stroke-dasharray="15 8"/>
+                    <defs>
+                        <linearGradient id="torusGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#38bdf8"/>
+                            <stop offset="0.5" stop-color="#c084fc"/>
+                            <stop offset="1" stop-color="#f472b6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Banner Text Section -->
+        <section class="banner-section">
+            <h2 class="banner-title">Your daily dose of game reviews</h2>
+            <p class="banner-subtext">We stream nightly with co op chaos chill chats and surprise drops.</p>
+        </section>
+
+        <!-- Bottom Feature Cards Grid -->
+        <section class="features-grid">
+            <!-- Card 1 -->
+            <div class="card feature-card">
+                <h3 class="feature-text">Zero toxic vibes and active mods.</h3>
+                <div class="icon-container">
+                    <svg viewBox="0 0 160 160" fill="none" class="feature-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80 10 L95 45 L130 30 L115 65 L150 80 L115 95 L130 130 L95 115 L80 150 L65 115 L30 130 L45 95 L10 80 L45 65 L30 30 L65 45 Z" fill="url(#starGrad)" stroke="#f472b6" stroke-width="3"/>
+                        <defs>
+                            <linearGradient id="starGrad" x1="10" y1="10" x2="150" y2="150" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7e22ce"/>
+                                <stop offset="1" stop-color="#3b82f6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card feature-card">
+                <h3 class="feature-text">Giveaways member emotes and badges.</h3>
+                <div class="icon-container">
+                    <svg viewBox="0 0 160 160" fill="none" class="feature-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40 80 C 40 40, 120 40, 120 80 C 120 120, 40 120, 40 80 Z" stroke="url(#coilGrad)" stroke-width="18" fill="none"/>
+                        <path d="M50 70 C 50 45, 110 45, 110 70 C 110 95, 50 95, 50 70 Z" stroke="#e879f9" stroke-width="8" fill="none"/>
+                        <defs>
+                            <linearGradient id="coilGrad" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#d8b4fe"/>
+                                <stop offset="1" stop-color="#818cf8"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card feature-card">
+                <h3 class="feature-text">Community events and viewer games.</h3>
+                <div class="icon-container">
+                    <svg viewBox="0 0 160 160" fill="none" class="feature-icon" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="80,15 135,50 135,110 80,145 25,110 25,50" fill="url(#gemGrad)" stroke="#c084fc" stroke-width="2"/>
+                        <polyline points="80,15 80,145" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2"/>
+                        <polyline points="25,50 80,80 135,50" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+                        <polyline points="25,110 80,80 135,110" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+                        <defs>
+                            <linearGradient id="gemGrad" x1="25" y1="15" x2="135" y2="145" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#38bdf8"/>
+                                <stop offset="0.5" stop-color="#818cf8"/>
+                                <stop offset="1" stop-color="#a855f7"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
