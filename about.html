@@ -1,0 +1,100 @@
+//User Page HTML 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Gaming Diary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- Hero / About Section -->
+        <section class="about-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">About Gaming Diary</h1>
+                <p class="hero-description">
+                    We are a dedicated browser-based platform designed to give every gamer a voice. From indie darlings to AAA blockbusters, Gaming Diary makes it effortless to discover hidden gems, publish your own hot takes, and explore honest ratings right from your web browser or other platforms.
+                </p>
+            </div>
+            <div class="hero-image-card">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="RGB Gaming Keyboard" class="keyboard-img">
+            </div>
+        </section>
+
+        <!-- What We Love to Review Section -->
+        <section class="review-section">
+            <h2 class="section-title">What We Love to Review</h2>
+
+            <div class="cards-grid">
+                <!-- Card 1: Indie Darlings -->
+                <div class="card review-card">
+                    <div class="card-text">
+                        <h3 class="card-title">Indie Darlings</h3>
+                        <p class="card-description">Small-studio creations and creative experimental games that turn out to be hidden gems</p>
+                    </div>
+                    <div class="graphic-container">
+                        <svg class="graphic-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 20 L115 75 L170 40 L135 90 L190 100 L135 110 L170 160 L115 125 L100 180 L85 125 L30 160 L65 110 L10 100 L65 90 L30 40 L85 75 Z" fill="url(#starGrad)" stroke="#e879f9" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="starGrad" x1="10" y1="20" x2="190" y2="180" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#a855f7"/>
+                                    <stop offset="0.5" stop-color="#ec4899"/>
+                                    <stop offset="1" stop-color="#6366f1"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 2: AAA Blockbusters -->
+                <div class="card review-card">
+                    <div class="card-text">
+                        <h3 class="card-title">AAA Blockbusters</h3>
+                        <p class="card-description">Major mainstream releases, high-budget titles, and flagship franchises.</p>
+                    </div>
+                    <div class="graphic-container">
+                        <svg class="graphic-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="60" stroke="url(#torusGrad)" stroke-width="26" stroke-dasharray="12 6"/>
+                            <defs>
+                                <linearGradient id="torusGrad" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#38bdf8"/>
+                                    <stop offset="0.5" stop-color="#c084fc"/>
+                                    <stop offset="1" stop-color="#f472b6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 3: Core Gameplay Features & Mechanics -->
+                <div class="card review-card">
+                    <div class="card-text">
+                        <h3 class="card-title">Core Gameplay Features &amp; Mechanics</h3>
+                        <p class="card-description">In-depth breakdowns of controls, graphics, storyline, and overall playability.</p>
+                    </div>
+                    <div class="graphic-container">
+                        <svg class="graphic-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="65" fill="url(#orbGrad)"/>
+                            <ellipse cx="80" cy="70" rx="35" ry="20" fill="#ffffff" fill-opacity="0.25" transform="rotate(-20 80 70)"/>
+                            <defs>
+                                <radialGradient id="orbGrad" cx="30%" cy="30%" r="70%">
+                                    <stop offset="0%" stop-color="#60a5fa"/>
+                                    <stop offset="40%" stop-color="#a855f7"/>
+                                    <stop offset="80%" stop-color="#ec4899"/>
+                                    <stop offset="100%" stop-color="#1e1b4b"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
