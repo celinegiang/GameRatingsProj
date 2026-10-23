@@ -11,7 +11,7 @@ GameRatingsProj is a website where people can browse a catalog of video games, s
 | Teammate | Responsibility |
 |---|---|
 | Celine Giang | Database and catalog: models, seed data, admin, search and filters |
-| Katia | Front end: HTML, CSS, page design |
+| Katia Garcia| Front end: HTML, CSS, page design |
 | Stephanie Rizo | Back end: accounts and ratings|
 
 ## How to run it
