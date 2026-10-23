@@ -1,4 +1,15 @@
+venv/
+env/
+.venv/
 virt/
+
 db.sqlite3
+
 __pycache__/
 *.pyc
+
+.env
+
+.vscode/
+
+.DS_Store
