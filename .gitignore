@@ -1,6 +1,7 @@
 venv/
 env/
 .venv/
+virt/
 
 db.sqlite3
 
