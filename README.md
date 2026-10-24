@@ -119,8 +119,8 @@ Initiative: GameRatingsProj, a Letterboxd for video games
 |---|---|---|---|---|
 | C1 | As a user, I want to rate a game from 1 to 5, so that I can show how much I liked it. | 2 | Celine + Stephanie | Done |
 | C2 | As a user, I want to write a short review with my rating, so that I can explain my opinion. | 2 | Celine + Stephanie | Done |
-| C3 | As a visitor, I want to see average ratings on the game list and game page, so that I can tell which games are well liked. | 2 | Celine | Done |
-| C4 | As a visitor, I want to see the most recent reviews on the home page, so that I can see what people are talking about. | 2 | Celine | Done |
+| C3 | As a visitor, I want to see average ratings on the game list and game page, so that I can tell which games are well liked. | 2 | Celine + Stephanie | Done |
+| C4 | As a visitor, I want to see the most recent reviews on the home page, so that I can see what people are talking about. | 2 | Whole team | Done |
 | C5 | As a user, I want a clickable star control for rating, so that rating feels quick and easy. | 4 | Katia + Stephanie | Planned |
 | C6 | As a user, I want to edit or delete my own review, so that I can fix mistakes or change my mind. | 5 | Stephanie | Planned |
  
@@ -138,7 +138,7 @@ Initiative: GameRatingsProj, a Letterboxd for video games
 | ID | User story | Sprint | Owner | Status |
 |---|---|---|---|---|
 | E1 | As a developer on the team, I want one integrated project with shared URL names and rules, so that our three parts work together. | 2 | Celine | Done |
-| E2 | As a developer on the team, I want automated tests for the main flows, so that we notice when one part breaks another. | 2 | Celine | Done |
+| E2 | As a developer on the team, I want automated tests for the main flows, so that we notice when one part breaks another. | 2 | Celine | Planned |
 | E3 | As a team member, I want the site deployed, so that anyone can use it. | 6 | Whole team | Planned |
 | E4 | As a team member, I want a final demo and complete documentation, so that we can present our work. | 6 | Whole team | Planned |
  
@@ -239,7 +239,7 @@ games/
   templates/games/        game_list.html, game_detail.html
 ```
 
-### Celine: Database and catalog
+### Celine: Database
 
 **Early prototype**
 - Wrote a first C++ `GameRatings` class that stored 1-5 ratings per user per game and could add, update and look up ratings. It was later removed once the project moved to Django.
@@ -260,7 +260,7 @@ games/
 - **Views and pages:** added the home page (recent reviews), the game detail page with a rating form, and average ratings on the game list.
 
 
-### Stephanie: Back end (accounts and ratings)
+### Stephanie: Back end
  
 - **Signup:** a `register` view in `accounts/views.py` using Django's built-in `UserCreationForm`. After a successful signup it shows a success message and redirects to the login page.
 - **Login and logout:** Django's built-in authentication views, mounted at `/accounts/`. Logging in or out sends the user to the home page.
