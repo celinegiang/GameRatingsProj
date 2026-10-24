@@ -40,11 +40,17 @@
   <ul>
     {% for game in games %}
       <li>
-        <strong>{{ game.title }}</strong>
+        <a href="{% url 'game_detail' game.pk %}"><strong>{{ game.title }}</strong></a>
         {% if game.release_year %}({{ game.release_year }}){% endif %}
         {% if game.developer %}- {{ game.developer }}{% endif %}
         <br>
         {% for genre in game.genres.all %}{{ genre.name }}{% if not forloop.last %}, {% endif %}{% endfor %}
+        <br>
+        {% if game.avg_rating %}
+          &#9733; {{ game.avg_rating|floatformat:1 }} / 5 ({{ game.num_ratings }} rating{{ game.num_ratings|pluralize }})
+        {% else %}
+          No ratings yet
+        {% endif %}
       </li>
     {% empty %}
       <li>No games match your search.</li>

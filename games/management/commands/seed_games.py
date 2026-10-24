@@ -1,9 +1,12 @@
 import json
 from pathlib import Path
+from datetime import timedelta
 
 from django.core.management.base import BaseCommand
+from django.utils import timezone
+from django.contrib.auth import get_user_model
 
-from games.models import Game, Genre, Platform
+from games.models import Game, Genre, Platform, Rating, Review
 
 # games/management/commands/seed_games.py -> parents[2] is the games/ folder
 DATA_FILE = Path(__file__).resolve().parents[2] / "data" / "games.json"
@@ -32,9 +35,42 @@ class Command(BaseCommand):
                 [Platform.objects.get_or_create(name=n)[0] for n in item.get("platforms", [])]
             )
 
+        self.load_demo_reviews()
+
         self.stdout.write(
             self.style.SUCCESS(
                 f"Done. {Game.objects.count()} games, "
                 f"{Genre.objects.count()} genres, {Platform.objects.count()} platforms."
             )
         )
+
+    def load_demo_reviews(self):
+        """Demo users and reviews so the homepage isn't empty. Safe to rerun."""
+        User = get_user_model()
+        data = json.loads(
+            (DATA_FILE.parent / "demo_reviews.json").read_text(encoding="utf-8")
+        )
+
+        for username in data["users"]:
+            if not User.objects.filter(username=username).exists():
+                user = User(username=username)
+                user.set_unusable_password()  # demo users can't log in
+                user.save()
+
+        now = timezone.now()
+        for item in data["reviews"]:
+            user = User.objects.get(username=item["user"])
+            game = Game.objects.get(title=item["game"])
+            rating, _ = Rating.objects.update_or_create(
+                user=user, game=game, defaults={"score": item["score"]}
+            )
+            # get_or_create keeps the original timestamp when re-run
+            Review.objects.get_or_create(
+                user=user,
+                game=game,
+                defaults={
+                    "rating": rating,
+                    "body": item["body"],
+                    "created_at": now - timedelta(days=item["days_ago"]),
+                },
+            )
