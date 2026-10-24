@@ -18,5 +18,20 @@
         <p><a href="{% url 'login' %}">Log In Here</a></p>
         <p>New player? <a href="{% url 'signup' %}">Create an Account Here</a></p>
     {% endif %}
+
+    <p><a href="{% url 'game_list' %}">Browse all games</a></p>
+
+       <h2>Recent reviews</h2>
+       {% for review in recent_reviews %}
+           <div>
+               <strong>{{ review.user.username }}</strong> on
+               <a href="{% url 'game_detail' review.game.pk %}">{{ review.game.title }}</a>
+               {% if review.rating %}&#9733; {{ review.rating.score }}/5{% endif %}
+               <p>{{ review.body }}</p>
+               <small>{{ review.created_at|timesince }} ago</small>
+           </div>
+       {% empty %}
+           <p>No reviews yet. Load sample data with <code>python manage.py seed_games</code>.</p>
+       {% endfor %}
 </body>
 </html>
