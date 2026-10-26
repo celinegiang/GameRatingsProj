@@ -64,11 +64,13 @@ class Command(BaseCommand):
             rating, _ = Rating.objects.update_or_create(
                 user=user, game=game, defaults={"score": item["score"]}
             )
-            # get_or_create keeps the original timestamp when re-run
-            Review.objects.get_or_create(
+            
+            # update the text if you edited the JSON; only set the date when first created
+            Review.objects.update_or_create(
                 user=user,
                 game=game,
-                defaults={
+                defaults={"rating": rating, "body": item["body"]},
+                create_defaults={
                     "rating": rating,
                     "body": item["body"],
                     "created_at": now - timedelta(days=item["days_ago"]),
