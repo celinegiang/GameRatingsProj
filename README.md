@@ -112,6 +112,7 @@ Initiative: GameRatingsProj, a Letterboxd for video games
 | B2 | As a user, I want to log in and log out, so that my ratings are tied to me. | 1 | Stephanie | Done |
 | B3 | As a new user, I want to see a confirmation message after signing up, so that I know my account was created. | 3 | Stephanie | Planned |
 | B4 | As a user, I want a profile page that lists my ratings, so that I can see everything I have rated. | 5 | Stephanie | Planned |
+| B5 | As a user, I want to able to set a profile picture and set a bio so that I can personalize my account. | Stephanie | Planned |
  
 **Epic C: Ratings and reviews**
  
