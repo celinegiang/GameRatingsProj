@@ -2,20 +2,20 @@
      "users": ["demo_alex", "demo_sam", "demo_jo"],
      "reviews": [
        {"user": "demo_alex", "game": "Hades", "score": 5, "days_ago": 0,
-        "body": "Every run feels different and the story keeps rewarding you for dying. Easily my favorite roguelike."},
+        "body": "This game ruined my life."},
        {"user": "demo_sam", "game": "Celeste", "score": 5, "days_ago": 1,
-        "body": "Tough platforming with a surprisingly personal story. The assist mode is a great touch."},
+        "body": "I LOVE YOU CELESTE!!!!."},
        {"user": "demo_jo", "game": "Stardew Valley", "score": 4, "days_ago": 1,
-        "body": "Perfect for winding down. I lost a whole weekend to my farm."},
+        "body": "Good game, but why can't I marry everyone at once?"},
        {"user": "demo_alex", "game": "Elden Ring", "score": 5, "days_ago": 2,
-        "body": "Exploring the world with almost no hand-holding is unforgettable."},
+        "body": "Wake up. Open Elden Ring. Dodgeroll. Die. Repeat."},
        {"user": "demo_sam", "game": "Hollow Knight", "score": 5, "days_ago": 3,
-        "body": "Great atmosphere and fantastic bosses. A huge amount of game for the price."},
+        "body": "It left me feeling hollow alright."},
        {"user": "demo_jo", "game": "Minecraft", "score": 4, "days_ago": 4,
-        "body": "Endless creativity, and even better with friends."},
+        "body": "Secret in-game Notch hack: look at lava, hold pickaxe, press Q."},
        {"user": "demo_sam", "game": "Portal 2", "score": 5, "days_ago": 6,
         "body": "Smart puzzles and genuinely funny. The co-op campaign is a blast."},
        {"user": "demo_jo", "game": "Undertale", "score": 4, "days_ago": 7,
-        "body": "Charming, funny and surprisingly emotional. Worth playing blind."}
+        "body": "baby's first bullet hell"}
      ]
 }
