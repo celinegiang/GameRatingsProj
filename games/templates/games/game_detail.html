@@ -1,6 +1,25 @@
    <!DOCTYPE html>
    <html lang="en">
    <head>
+
+      <style>
+      .star-rating {
+          display: flex;
+          gap: 5px;
+      }
+
+      .star {
+          font-size: 40px;
+          color: lightgray;
+          cursor: pointer;
+          user-select: none;
+          transition: color 0.2s ease;
+      }
+
+      .star.active {
+          color: gold;
+      }
+      </style>
      <meta charset="utf-8">
      <title>{{ game.title }}</title>
    </head>
@@ -28,11 +47,34 @@
 
      <h2>{% if user_rating %}Your rating: {{ user_rating.score }}/5{% else %}Rate this game{% endif %}</h2>
      {% if user.is_authenticated %}
-       <form method="post">
-         {% csrf_token %}
-         {{ form.as_p }}
-         <button type="submit">{% if user_rating %}Update{% else %}Submit{% endif %}</button>
-       </form>
+      <form method="post">
+        {% csrf_token %}
+
+        <p><strong>Rating:</strong></p>
+
+        <input type="hidden"
+              id="score"
+              name="score"
+              value="{% if user_rating %}{{ user_rating.score }}{% endif %}">
+
+        <div class="star-rating">
+            <span class="star" data-rating="1">★</span>
+            <span class="star" data-rating="2">★</span>
+            <span class="star" data-rating="3">★</span>
+            <span class="star" data-rating="4">★</span>
+            <span class="star" data-rating="5">★</span>
+        </div>
+
+        <p>
+          {{ form.body.label_tag }}
+          {{ form.body }}
+        </p>
+
+        <button type="submit">
+          {% if user_rating %}Update{% else %}Submit{% endif %}
+        </button>
+      </form>
+
      {% else %}
        <p><a href="{% url 'login' %}?next={{ request.path }}">Log in</a> to rate this game.</p>
      {% endif %}
@@ -48,5 +90,48 @@
      {% empty %}
        <p>No reviews yet.</p>
      {% endfor %}
+
+     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+          const stars = document.querySelectorAll(".star");
+          const scoreInput = document.getElementById("score");
+
+          function updateStars(rating) {
+              stars.forEach(star => {
+                  if (Number(star.dataset.rating) <= Number(rating)) {
+                      star.classList.add("active");
+                  } else {
+                      star.classList.remove("active");
+                  }
+              });
+          }
+
+          if (scoreInput.value) {
+              updateStars(scoreInput.value);
+          }
+
+          stars.forEach(star => {
+
+              star.addEventListener("mouseover", function () {
+                  updateStars(this.dataset.rating);
+              });
+
+              star.addEventListener("click", function () {
+                  scoreInput.value = this.dataset.rating;
+                  updateStars(this.dataset.rating);
+              });
+
+          });
+
+          document.querySelector(".star-rating")
+              .addEventListener("mouseleave", function () {
+                  if (scoreInput.value) {
+                      updateStars(scoreInput.value);
+                  }
+              });
+      });
+</script>
+
    </body>
    </html>

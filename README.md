@@ -112,6 +112,7 @@ Initiative: GameRatingsProj, a Letterboxd for video games
 | B2 | As a user, I want to log in and log out, so that my ratings are tied to me. | 1 | Stephanie | Done |
 | B3 | As a new user, I want to see a confirmation message after signing up, so that I know my account was created. | 3 | Stephanie | Planned |
 | B4 | As a user, I want a profile page that lists my ratings, so that I can see everything I have rated. | 5 | Stephanie | Planned |
+| B5 | As a user, I want to able to set a profile picture and set a bio so that I can personalize my account. | Stephanie | Done |
  
 **Epic C: Ratings and reviews**
  
@@ -121,7 +122,7 @@ Initiative: GameRatingsProj, a Letterboxd for video games
 | C2 | As a user, I want to write a short review with my rating, so that I can explain my opinion. | 2 | Celine + Stephanie | Done |
 | C3 | As a visitor, I want to see average ratings on the game list and game page, so that I can tell which games are well liked. | 2 | Celine + Stephanie | Done |
 | C4 | As a visitor, I want to see the most recent reviews on the home page, so that I can see what people are talking about. | 2 | Whole team | Done |
-| C5 | As a user, I want a clickable star control for rating, so that rating feels quick and easy. | 4 | Katia + Stephanie | Planned |
+| C5 | As a user, I want a clickable star control for rating, so that rating feels quick and easy. | 4 | Katia + Stephanie | Done |
 | C6 | As a user, I want to edit or delete my own review, so that I can fix mistakes or change my mind. | 5 | Stephanie | Planned |
  
 **Epic D: Front end**
