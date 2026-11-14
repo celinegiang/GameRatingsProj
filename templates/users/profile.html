@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+
+<h1>My Profile</h1>
+
+<img src="{{ user.profile.image.url }}"
+     alt="Profile Picture"
+     width="150">
+
+<p>
+    <strong>Username:</strong>
+    {{ user.username }}
+</p>
+
+<p>
+    <strong>Email:</strong>
+    {{ user.email }}
+</p>
+
+<p>
+    <strong>Bio:</strong>
+    {{ user.profile.bio }}
+</p>
+
+<hr>
+
+<form method="POST"
+      enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ u_form.as_p }}
+
+    {{ p_form.as_p }}
+
+    <button type="submit">
+        Save Changes
+    </button>
+
+</form>
+
+</body>
+</html>

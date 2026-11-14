@@ -5,13 +5,40 @@
     <h1>GameRatingsProj Backend Test Home</h1>
     {% if user.is_authenticated %}
         <p>Welcome back, <strong>{{ user.username }}</strong>!</p>
-        
-        <form action="{% url 'logout' %}" method="post" style="display:inline;">
+
+        <h2>Your Profile</h2>
+
+        <img src="{{ user.profile.image.url }}"
+            alt="Profile Picture"
+            width="150">
+
+        <p><strong>Username:</strong> {{ user.username }}</p>
+
+        <p><strong>Email:</strong> {{ user.email }}</p>
+
+        <p><strong>Bio:</strong></p>
+
+        <p>
+            {% if user.profile.bio %}
+                {{ user.profile.bio }}
+            {% else %}
+                No bio added yet.
+            {% endif %}
+        </p>
+
+        <p>
+            <a href="{% url 'profile' %}">
+                Edit Profile
+            </a>
+        </p>
+
+        <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
             <button type="submit" style="background:none; border:none; color:blue; text-decoration:underline; cursor:pointer; padding:0;">
                 Log Out
             </button>
         </form>
+
         
     {% else %}
         <p>You are logged out.</p>
