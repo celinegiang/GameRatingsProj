@@ -19,7 +19,6 @@ def register(request):
             Profile.objects.create(user=user)#create profile for user
 
             username = form.cleaned_data.get('username')
-
             messages.success(request, f'Account created for {username}! You can now log in.')
             return redirect('login') #send straight login page
     else:
