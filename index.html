@@ -13,9 +13,33 @@
 <body>
 
     <div class="page-wrapper">
-        <!-- Hero Section -->
+       <!-- Hero Section with Logo -->
         <header class="hero-header">
-            <h1 class="main-title">Review and Play</h1>
+            <div class="site-logo">
+                <div class="logo-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <rect x="4" y="12" width="40" height="24" rx="12" fill="url(#logoGrad)"/>
+                        <!-- D-Pad -->
+                        <path d="M16 20V28M12 24H20" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
+                        <!-- Action Buttons -->
+                        <circle cx="33" cy="21" r="2.2" fill="#ffffff"/>
+                        <circle cx="37" cy="25" r="2.2" fill="#ffffff"/>
+                        <circle cx="29" cy="25" r="2.2" fill="#ffffff"/>
+                        <circle cx="33" cy="29" r="2.2" fill="#ffffff"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="4" y1="12" x2="44" y2="36" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#2563eb"/>
+                                <stop offset="1" stop-color="#7c3aed"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-kicker">GAMING DIARY</span>
+                    <h1 class="main-title">Review and Play</h1>
+                </div>
+            </div>
+
             <p class="hero-description">
                 Level up your voice: jump into our gaming review browser today, share your ultimate hot takes, and help shape the future of play for gamers worldwide!<br>
                 <span>Join us on our platform: <a href="https://www.gamingdiary.com" target="_blank" class="link-highlight">www.gamingdiary.com</a></span>
@@ -118,6 +142,40 @@
                             </linearGradient>
                         </defs>
                     </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Community Comments Section -->
+        <section class="comments-section">
+            <h2 class="comments-heading">Latest Player Comments</h2>
+
+            <div class="comments-list">
+                <!-- Comment 1 -->
+                <div class="comment-card">
+                    <div class="comment-username">@PixelValkyrie</div>
+                    <div class="comment-date">November 14, 2026</div>
+                    <div class="comment-body">
+                        Just finished the new co-op dungeon raid with folks from last night's stream—easily my favorite boss soundtrack of the year!
+                    </div>
+                </div>
+
+                <!-- Comment 2 -->
+                <div class="comment-card">
+                    <div class="comment-username">@ShadowFrame99</div>
+                    <div class="comment-date">November 13, 2026</div>
+                    <div class="comment-body">
+                        The combat mechanics feel super crisp after the latest patch, though the inventory UI still needs a quick-sort button.
+                    </div>
+                </div>
+
+                <!-- Comment 3 -->
+                <div class="comment-card">
+                    <div class="comment-username">@RetroNova</div>
+                    <div class="comment-date">November 12, 2026</div>
+                    <div class="comment-body">
+                        Hands down the best indie RPG I have logged in my Gaming Diary this fall. Solid 9/10 for world-building alone.
+                    </div>
                 </div>
             </div>
         </section>
